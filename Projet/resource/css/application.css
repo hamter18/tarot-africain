@@ -1,0 +1,300 @@
+/**
+Les fichiers CSS permettent de gérer l'aspect graphique d'une application. Ainsi ce fichier CSS a pour but de réaliser du
+style  à l'application tout en le gardant séparée du reste du code.
+Cette séparation du style et du contenu permet : d'éviter des duplications, une maintenance plus facile, d'utiliser le
+même contenu avec différents styles pour différents usages
+*/
+
+  /*
+
+
+*/
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*
+Mise en place de background de l'application.
+*/
+root {
+    display: block;
+}
+
+
+.root {
+    -fx-background-image: url("/images/background.jpg");
+}
+
+     /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*
+Permet d'initialiser le style de base de l'ensemble des labels,button et textFiel de l'application.
+*/
+.label .text{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+    -fx-effect: dropshadow( one-pass-box , black, 10, 0.5, 3, 0);
+    -fx-stroke: black;
+    -fx-stroke-width: 0.7px;
+    -fx-font-family: 'Itim';
+
+}
+
+
+.button{
+    -fx-border-radius: 75;
+    -fx-border-width:1;
+    -fx-padding: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: lightgrey;
+    -fx-background-color: linear-gradient(#F11A1A, #FF8C00);
+    -fx-background-radius: 75;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#FF8C00, #FFD700);
+}
+
+.button .text {
+    -fx-font-family: 'Orbitron';
+}
+
+.text-field  {
+    -fx-text-fill: #ffa31a;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+    -fx-alignment: CENTER;
+  }
+
+/*
+Permet d'initialiser le style du label du titre des fenêtres
+*/
+
+
+#labelNomPage .text{
+    -fx-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-family:  'Merienda One';
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( one-pass-box , grey, 10, 0, 3, 0);
+}
+
+
+/*
+Propriété permettant de créer le contour des textes de l'application
+*/
+.borderPaneLabel{
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 20;
+    -fx-opacity: 0.8;
+    -fx-padding:10;
+}
+
+/*
+Propriété permettant utiliser dans la fenêtre accueil
+*/
+.btnAccueil {
+    -fx-border-radius: 75;
+    -fx-border-width:2;
+    -fx-padding: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: lightgrey;
+    -fx-background-color: linear-gradient(#F11A1A, #FF8C00);
+    -fx-background-radius: 75;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.btnAccueil .text{
+    -fx-font-size: 25px;
+    -fx-stroke: black;
+    -fx-stroke-width: 0.7px;
+}
+/*
+Propriété permettant utiliser dans la fenêtre preliminaireJeu
+*/
+
+#labelDefinitionRegleDuJeu{
+    -fx-padding:10;
+}
+
+#labelDefinitionRegleDuJeu .text{
+    -fx-font-size: 25px;
+}
+
+.borderPaneObject {
+    -fx-padding:10;
+}
+
+.borderPaneObject .radio-button{
+    -fx-font-size: 15px;
+}
+
+.borderPaneObject .label{
+    -fx-padding:10;
+}
+
+.borderPaneObject .label .text{
+    -fx-stroke-width: 0px;
+}
+
+.labelTitre .text{
+    -fx-font-size: 30px;
+    -fx-fill: darkorange;
+    -fx-effect: dropshadow( one-pass-box , grey, 10, 0.2, 3, 0);
+}
+
+.radio-button {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.erreur{
+    -fx-border-width: 3px;
+    -fx-border-color: red;
+}
+
+.labelErreur .text{
+    -fx-fill: red;
+    -fx-font-family: 'Ultra';
+    -fx-font-size: 13px;
+}
+
+.bingBonneChance .label .text{
+    -fx-font-size: 26px;
+    -fx-fill: deeppink;
+    -fx-stroke-width: 0px;
+}
+
+
+
+/*
+Propriété permettant utiliser dans la fenêtre previson
+*/
+
+.labelText .text{
+    -fx-fill: #ffad99;
+    -fx-stroke-width: 0px;
+}
+
+.labelInfo .text{
+    -fx-fill:  #ff8080;
+    -fx-stroke-width: 0px;
+    -fx-underline: true;
+}
+
+.styleListeDeCarte .text{
+    -fx-font-size: 25px;
+    -fx-stroke-width: 0px;
+    -fx-padding:2;
+}
+
+#labelFieldDetailCarte .text{
+    -fx-fill:  #ffc266;
+    -fx-stroke-width: 0px;
+    -fx-font-weight: normal;
+    -fx-font-size: 22px;
+}
+
+/*
+Propriété permettant utiliser dans la fenêtre previson, jeuRapide, jeuComplexe
+*/
+
+#listDeCarte {
+    -fx-background-color: black;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #47d147;
+}
+
+.list-cell:even {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+}
+
+.list-cell:filled {
+    -fx-background-color: black;
+}
+
+.list-cell:empty {
+    -fx-border-width: 0px;
+    -fx-background-color: black;
+}
+
+.borderPaneObject .listDeCarte .label .text{
+    -fx-font-weight: bold;
+    -fx-stroke-width: 0px;
+    -fx-font-size: 35px;
+}
+
+/*
+Propriété permettant utiliser dans la fenêtre jeuRapide, jeuComplexe
+*/
+
+.borderPaneLabelPrevison{
+    -fx-background-color: black;
+    -fx-background-radius: 20;
+    -fx-opacity: 0.8;
+}
+
+.labelPrevision .text{
+    -fx-font-size: 19px;
+    -fx-stroke-width: 0px;
+    -fx-fill: white;
+}
+
+.labelNbPartie {
+    -fx-text-alignment: CENTER;
+}
+
+.labelNbPartie .text{
+    -fx-font-size: 20px;
+    -fx-fill:  gold;
+}
+
+.logoJoueur {
+    -fx-background-color: linear-gradient(#F11A1A, #FF8C00);
+    -fx-background-radius: 20;
+    -fx-opacity: 0.5;
+}
+/*
+Propriété permettant utiliser dans la fenêtre tableauDesScores
+*/
+#tableDesScores{
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #1a75ff;
+}
+
+.table-view:focused  .table-row-cell:filled:hover{
+    -fx-background-color:  #ccffff;
+    -fx-text-fill:  black;
+}
+
+.table-view:focused .table-row-cell:filled:hover:selected {
+    -fx-background-color:   #99e699;
+    -fx-text-fill:  black;
+}
+
+
+.table-view .column-header .text{
+    -fx-font-size: 22px;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}

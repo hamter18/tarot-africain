@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="650.0" prefWidth="1100.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" top="20.0" right="20.0"/>
+    </padding>
+    <top>
+        <GridPane gridLinesVisible="false">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="60" />
+                <ColumnConstraints percentWidth="20"/>
+            </columnConstraints>
+            <StackPane GridPane.columnIndex="0" alignment="CENTER">
+                <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                <VBox alignment="CENTER">
+                    <Label styleClass="labelNbPartie" prefHeight="75"  wrapText="true" text="Nombre de manche perdue par l'adversaire : "/>
+                    <Label styleClass="labelNbPartie" fx:id="labelNbPartieGagneAdversaire"/>
+                </VBox>
+            </StackPane>
+            <VBox alignment="CENTER" GridPane.columnIndex="1" fx:id="controler"></VBox>
+            <StackPane GridPane.columnIndex="2" alignment="CENTER">
+                <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                <VBox alignment="CENTER">
+                    <Label styleClass="labelNbPartie" prefHeight="75" wrapText="true" text="Nombre de manche que vous avez perdue : "/>
+                    <Label styleClass="labelNbPartie" fx:id="labelNbPartieGagneJoueur"/>
+                </VBox>
+            </StackPane>
+        </GridPane>
+    </top>
+    <center>
+        <StackPane alignment="CENTER">
+                <VBox alignment="CENTER" GridPane.rowIndex="0" fx:id="controlerJeu"></VBox>
+                <FlowPane alignment="CENTER">
+                    <ListView fx:id="listDeCarte" orientation="HORIZONTAL"  maxHeight="180" minWidth="440" onMouseClicked="#carteChoix"/>
+                </FlowPane>
+        </StackPane>
+    </center>
+</BorderPane>

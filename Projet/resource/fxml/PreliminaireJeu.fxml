@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="650.0" prefWidth="1100.0">
+    <padding>
+        <Insets bottom="10.0" left="10.0" top="5.0" right="10.0"/>
+    </padding>
+    <top>
+        <VBox alignment="CENTER" GridPane.rowIndex="0" fx:id="controler"></VBox>
+    </top>
+    <center>
+        <GridPane prefHeight="200" prefWidth="320" hgap="10.0" vgap="10.0" gridLinesVisible="false">
+            <rowConstraints>
+                <RowConstraints percentHeight="100.0"/>
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50.0" />
+                <ColumnConstraints percentWidth="50.0"/>
+            </columnConstraints>
+            <VBox GridPane.columnIndex="1" GridPane.rowSpan="1" alignment="CENTER">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" top="30.0" right="30.0"/>
+                </padding>
+                <Label styleClass="labelTitre" text="Informations :"/>
+                <StackPane alignment="CENTER" >
+                    <HBox styleClass="borderPaneLabel"></HBox>
+                    <VBox alignment="CENTER" styleClass="borderPaneObject" spacing="5">
+                        <HBox  styleClass="bingBonneChance" alignment="CENTER">
+                            <Label  fx:id="labelBonneChance" text="Bonne chance "/>
+                            <Label  fx:id="labelBindingSurname" text="${textAeraSurname.text}"/>
+                        </HBox>
+                        <Label fx:id="labelSurname" text="Surname : "/>
+                        <TextField fx:id="textAeraSurname" maxWidth="300" onKeyReleased="#keyValidation"/>
+                        <StackPane>
+                            <FlowPane styleClass="erreur" fx:id="flowPaneErreur1"></FlowPane>
+                            <Label fx:id="labelJoueurExistant" styleClass="labelErreur"  minWidth="270" wrapText="true" minHeight="80" textAlignment="CENTER"/>
+                        </StackPane>
+                        <Label text="Date d'inscription"/>
+                        <DatePicker fx:id="dateInscription"></DatePicker>
+                        <Label text="Vous-voulez faire une partie :"/>
+                        <HBox alignment="CENTER" spacing="5.0">
+                            <children>
+                                <RadioButton fx:id="partieRapide" text="Partie rapide">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="radiosBoutonsPartie" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="partieComplete" text="Partie complete" toggleGroup="$radiosBoutonsPartie" />
+                            </children>
+                        </HBox>
+                        <StackPane>
+                            <FlowPane styleClass="erreur" fx:id="flowPaneErreur2"></FlowPane>
+                            <Label styleClass="labelErreur" fx:id="labelAucunRadioButtonSelected"/>
+                        </StackPane>
+                        <Button fx:id="buttonGo" text="Go !" onAction="#clicPreliminaire"/>
+                    </VBox>
+                </StackPane>
+            </VBox>
+            <VBox GridPane.columnIndex="0" GridPane.rowSpan="1" alignment="CENTER">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" top="30.0" right="30.0"/>
+                </padding>
+                <Label styleClass="labelTitre" text="Règles :"/>
+                <StackPane>
+                    <HBox styleClass="borderPaneLabel"></HBox>
+                    <Label fx:id="labelDefinitionRegleDuJeu" wrapText="true" textAlignment="CENTER" text=" Le tarot africain est un jeu de prédiction dont le but est de respecter le contrat établi au départ. Vous allez devoir bien évaluer les cartes en votre possession pour gagner le nombre de parties prévues. Le vainqueur d'un tour et celui qui aura poser la carte avec la valeur la plus haute. Le jeu de carte est composé de 22 cartes allant de 1 à 22."/>
+                </StackPane>
+            </VBox>
+        </GridPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="container" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="650.0" prefWidth="1100.0">
+    <top>
+        <VBox alignment="CENTER" fx:id="controler"></VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Button styleClass="btnAccueil" text="Jouer" fx:id="jouer" onAction="#clicJouer"/>
+            <Button styleClass="btnAccueil" text="Tableau des scores" fx:id="tableauDesScore" onAction="#clicTableauDesScores"/>
+            <Button styleClass="btnAccueil" text="Quitter" fx:id="quitter" onAction="#clicQuitter"/>
+        </VBox>
+    </center>
+</BorderPane>

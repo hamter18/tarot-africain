@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<fx:root alignment="CENTER" type="HBox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets bottom="5.0" left="5.0" top="5.0" right="5.0"/>
+    </padding>
+    <GridPane gridLinesVisible="false">
+            <rowConstraints>
+                <RowConstraints percentHeight="25"/>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="25"/>
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="50" />
+                <ColumnConstraints percentWidth="25"/>
+            </columnConstraints>
+            <FlowPane GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="TOP_LEFT">
+                <StackPane prefHeight="50" prefWidth="100">
+                    <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                    <VBox alignment="CENTER">
+                        <Label styleClass="labelPrevision" fx:id="labelPrevisionAdverse" text="Prévision :" />
+                        <Label styleClass="labelPrevision" fx:id="labelBindPresivionAdverse"/>
+                    </VBox>
+                </StackPane>
+            </FlowPane>
+            <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <StackPane>
+                        <HBox styleClass="logoJoueur"/>
+                        <VBox alignment="CENTER">
+                            <FlowPane alignment="CENTER">
+                                <ImageView fx:id="imageJoueurAdverse" fitHeight="75" fitWidth="75">
+                                    <Image url="/images/logoJoueurAdverse.png"/>
+                                </ImageView>
+                            </FlowPane>
+                            <Label fx:id="labelSurnameAdverse" text="Joueur adverse"/>
+                        </VBox>
+                    </StackPane>
+                </VBox>
+            </FlowPane>
+            <FlowPane GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="TOP_RIGHT">
+                <StackPane prefHeight="75" prefWidth="175">
+                    <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                    <VBox alignment="CENTER">
+                        <Label styleClass="labelPrevision" fx:id="labelPartieGagneeAdverse" wrapText="true" textAlignment="CENTER" text="Nombre de parties gagnées :" />
+                        <Label styleClass="labelPrevision" fx:id="labelBindPartieGagneeAdverse" />
+                    </VBox>
+                </StackPane>
+            </FlowPane>
+            <FlowPane GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="TOP_LEFT">
+                <StackPane prefHeight="75" prefWidth="175">
+                    <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                    <VBox alignment="CENTER">
+                        <Label styleClass="labelPrevision" fx:id="labelPartieGagneeJoueur" wrapText="true" textAlignment="CENTER" text="Nombre de parties gagnées :" />
+                        <Label styleClass="labelPrevision" fx:id="labelBindPartieGagneeJoueur" />
+                    </VBox>
+                </StackPane>
+            </FlowPane>
+            <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="2" alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <StackPane>
+                        <HBox styleClass="logoJoueur"/>
+                        <VBox alignment="CENTER">
+                            <FlowPane alignment="CENTER">
+                                <ImageView fx:id="imageJoueur" fitHeight="75" fitWidth="75">
+                                    <Image url="/images/logoJoueur.png"/>
+                                </ImageView>
+                            </FlowPane>
+                            <Label fx:id="labelSurname" text="SurnameJoueur"/>
+                        </VBox>
+                    </StackPane>
+                </VBox>
+            </FlowPane>
+            <FlowPane GridPane.columnIndex="2" GridPane.rowIndex="2" alignment="TOP_RIGHT">
+                <StackPane prefHeight="50" prefWidth="100">
+                    <HBox styleClass="borderPaneLabelPrevison"></HBox>
+                    <VBox alignment="CENTER">
+                        <Label styleClass="labelPrevision" fx:id="labelPrevisionJoueur" text="Prévision :" />
+                        <Label styleClass="labelPrevision" fx:id="labelBindPresivionJoueur" />
+                    </VBox>
+                </StackPane>
+            </FlowPane>
+        </GridPane>
+</fx:root>

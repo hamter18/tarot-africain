@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="650.0" prefWidth="1100.0">
+    <top>
+        <VBox alignment="CENTER" fx:id="controler"></VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <TableView fx:id="tableDesScores" BorderPane.alignment="CENTER" maxHeight="350"  maxWidth="850"/>
+            <VBox alignment="CENTER" spacing="15">
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="buttonTableDesScores" text="Nouvelle partie !" onAction="#clicNouvellePartie"/>
+                    <Button fx:id="buttonQuitter" text="Quitter le jeu !" onAction="#clicQuitter"/>
+                    <Button fx:id="buttonRemettreZero" text="Remettre a zero !" onAction="#clicRemettreAZero"/>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="buttonSupprimerUnJoueur" text="Supprimer un joueur" onAction="#clicSupprimerUnJoueurDeLaListe"/>
+                    <Button fx:id="buttonLire" text="Récupérer la liste des joueurs" onAction="#clicLire"/>
+                    <Button fx:id="buttonSupprimerListeJoueur" text="Tout supprimer" onAction="#clicSupprimerLaListeDeJoueur"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
